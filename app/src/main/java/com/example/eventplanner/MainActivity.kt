@@ -1,5 +1,6 @@
 package com.example.eventplanner
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -30,6 +31,12 @@ class MainActivity : AppCompatActivity() {
         binding.rvEvent.setHasFixedSize(true)
         event.addAll(getEvent())
         showRecyclerList()
+
+        binding.addFab.setOnClickListener {
+            val intent = Intent(this, AddNewEvent::class.java)
+            startActivity(intent)
+
+        }
 
     }
 

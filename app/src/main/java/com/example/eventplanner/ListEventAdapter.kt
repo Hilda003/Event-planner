@@ -30,6 +30,7 @@ class ListEventAdapter(private val listEvent: ArrayList<Event>): RecyclerView.Ad
         holder.binding.imageView.setImageResource(image)
         holder.itemView.setOnClickListener {
                         val intent = Intent(holder.itemView.context, DetailActivity::class.java)
+//            intent.putExtra(DetailActivity.EXTRA_EVENT, listEvent[position])
         }
 
     }
